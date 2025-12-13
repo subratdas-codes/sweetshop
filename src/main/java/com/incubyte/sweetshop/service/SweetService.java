@@ -50,6 +50,26 @@ public class SweetService {
         return sweetRepository.findByCategoryIgnoreCase(category);
     }
 
+    public Sweet purchaseSweet(Long id, int quantity) {
+        Sweet sweet = sweetRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Sweet not found"));
+
+        if (sweet.getQuantity() < quantity) {
+            throw new RuntimeException("Insufficient stock");
+        }
+
+        sweet.setQuantity(sweet.getQuantity() - quantity);
+        return sweetRepository.save(sweet);
+    }
+
+    public Sweet restockSweet(Long id, int quantity) {
+        Sweet sweet = sweetRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Sweet not found"));
+
+        sweet.setQuantity(sweet.getQuantity() + quantity);
+        return sweetRepository.save(sweet);
+    }
+
     
     
     
