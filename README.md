@@ -88,7 +88,7 @@ Install dependencies:
 npm install
 
 
-Run:
+Run the frontend:
 
 npm start
 
@@ -96,3 +96,78 @@ npm start
 Frontend runs on:
 
 http://localhost:3000
+
+🗄️ Database Details (MySQL)
+Database Used
+
+MySQL 8.x
+
+Relational database for persistent storage
+
+Database Name
+sweetshop_db
+
+Tables & Structure
+users Table
+
+Stores authentication and authorization details.
+
+id – Primary key (auto-generated)
+
+username – Unique login identifier
+
+password – Encrypted using BCrypt
+
+role – Defines access level (USER, ADMIN)
+
+sweets Table
+
+Stores sweets inventory information.
+
+id – Primary key (auto-generated)
+
+name – Sweet name
+
+category – Sweet category
+
+price – Price per unit
+
+quantity – Available stock
+
+AI Usage Declaration
+
+I used ChatGPT as an AI assistant during the development of this project for:
+
+Understanding problem requirements
+
+Designing application structure and layers
+
+Writing boilerplate code for controllers, services, and repositories
+
+Debugging configuration and runtime issues
+
+Improving code quality and test coverage
+
+Assisting with frontend UI logic and styling guidance
+
+Version Control
+
+Git used for source control
+
+Descriptive and incremental commits
+
+Clean project structure maintained
+
+Work in Progress
+
+Frontend dashboard
+
+User-friendly UI for sweets management
+
+Screenshots and UI documentation
+
+Additional test coverage
+
+Conclusion
+
+This project demonstrates a secure, scalable, and well-structured approach to building a full-stack application using modern Java and React technologies, aligned with the goals of the AI Kata.
